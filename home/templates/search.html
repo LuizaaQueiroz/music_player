@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="flex flex-col space-y-6">
+  <!-- Barra de busca -->
+  <form method="get" action="{% url 'search_music' %}" class="w-full">
+    <input
+      type="text"
+      name="q"
+      value="{{ query }}"
+      placeholder="Search for songs or artists..."
+      class="w-full bg-neutral-800 text-white px-4 py-3 rounded-lg outline-none"
+    >
+  </form>
+
+  <!-- Lista de músicas -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    {% for track in tracks %}
+      <div
+        class="bg-card p-4 rounded-xl hover:bg-neutral-800 transition cursor-pointer"
+        onclick="playSong('{{ track.preview }}', '{{ track.title }}', '{{ track.artist.name }}', '{{ track.album.cover_medium }}')"
+      >
+        <img src="{{ track.album.cover_medium }}" alt="{{ track.title }}" class="rounded-lg mb-3">
+        <h3 class="font-semibold">{{ track.title }}</h3>
+        <p class="text-gray-400 text-sm">{{ track.artist.name }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

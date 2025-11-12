@@ -1,0 +1,17 @@
+/* Ícones inativos: cinza claro */
+.nav-link .material-icons {
+  color: #b3b3b3;
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
+
+/* Ícones ativos: branco */
+.nav-link.active .material-icons {
+  color: #ffffff;
+}
+
+/* Alinhamento dos ícones e texto */
+.nav-link {
+  display: flex;
+  align-items: center;
+}
