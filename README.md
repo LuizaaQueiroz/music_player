@@ -10,11 +10,11 @@ REST, manipulação de dados JSON e integração entre frontend e backend.
 
 ##  Funcionalidades
 
--   🔎 Busca de músicas por nome do artista ou faixa
--   🎵 Reprodução de preview (30 segundos)
--   🖼️ Exibição da capa do álbum
--   👤 Exibição do nome do artista
--   ⚡ Resultados dinâmicos via API
+-    Busca de músicas por nome do artista ou faixa
+-    Reprodução de preview (30 segundos)
+-    Exibição da capa do álbum
+-    Exibição do nome do artista
+-    Resultados dinâmicos via API
 
 ------------------------------------------------------------------------
 
